@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="hero-image p-5">
+    <div class="container">
+        <form action="" method="POST" enctype="multipart/form-data" class="w-50 m-auto border text-white p-5">
+            <h1>Profil Oluştur</h1>
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Oluştur" class="btn btn-outline-danger mt-3">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

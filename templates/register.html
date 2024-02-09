@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="hero-image">
+    <div class="container p-5">
+        <form action="" method="POST" enctype="multipart/form-data" class="w-50 m-auto border text-light p-3">
+            <h1 class="text-white text-center">Kullanıcı Kayıt Formu</h1>
+            <hr class="text-white"> 
+            {% csrf_token %}
+            {% comment %} {{form}} {% endcomment %}
+            <label>İsim</label>
+            <input type="text" placeholder="İsim" name="isim" class="form-control">
+
+            <label>Soyisim</label>
+            <input type="text" placeholder="Soyisim" name="soyisim" class="form-control">
+
+            <label>Email</label>
+            <input type="email" placeholder="Email" name="email" class="form-control">
+
+            <label>Resim</label>
+            <input type="file" name="resim" class="form-control">
+
+            <label>Tel</label>
+            <input type="tel"  name="tel" placeholder="0555 555 55 55" class="form-control" >
+            
+            <label>Doğum Tarihi</label>
+            <input type="date" name="dogum" class="form-control">
+
+            <label>Şifre</label>
+            <input type="password" name="sifre1" class="form-control">
+            
+            <label>Şifre Onay</label>
+            <input type="password" name="sifre2" class="form-control">
+            
+
+
+            
+            <input type="submit" value="Kayıt Ol" class="btn btn-danger mt-3">
+            <a class="btn btn-warning mt-3" href="/">Geri Dön</a>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
